@@ -4,24 +4,24 @@ using System.Collections.Generic;
 
 namespace AutoParts.DAL
 {
-    public class UsuarioDAO : ICrud<Servico>
+    public class UsuarioDAO : ICrud<Usuario>
     {
-        public void Adicionar(Servico usuario)
+        public void Adicionar(Usuario usuario)
         {
             throw new NotImplementedException();
         }
 
-        public void Editar(Servico usuario)
+        public void Editar(Usuario usuario)
         {
             throw new NotImplementedException();
         }
 
-        public IList<Servico> Listar()
+        public IList<Usuario> Listar()
         {
             throw new NotImplementedException();
         }
 
-        public void Remover(Servico usuario)
+        public void Remover(Usuario usuario)
         {
             throw new NotImplementedException();
         }
