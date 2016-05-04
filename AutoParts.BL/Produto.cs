@@ -1,6 +1,6 @@
 ﻿namespace AutoParts.BL
 {
-    public class Produto
+    public class Servico
     {
         public int ProdutoId { get; set; }
 
