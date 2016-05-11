@@ -1,4 +1,4 @@
-﻿using AutoParts.BL;
+﻿using AutoParts.DL;
 using System;
 using System.Collections.Generic;
 
@@ -18,7 +18,7 @@ namespace AutoParts.DAL
 
         public IList<Servico> Listar()
         {
-            throw new NotImplementedException();
+            return new List<Servico>();
         }
 
         public void Remover(Servico servico)

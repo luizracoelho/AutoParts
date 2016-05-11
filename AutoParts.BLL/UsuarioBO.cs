@@ -1,4 +1,4 @@
-﻿using AutoParts.BL;
+﻿using AutoParts.DL;
 using AutoParts.DAL;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace AutoParts.BLL
 {
-    public class UsuarioBO : ICrud<Usuario>
+    public class UsuarioBO
     {
         UsuarioDAO dao;
 
@@ -15,7 +15,7 @@ namespace AutoParts.BLL
             dao = new UsuarioDAO();
         }
 
-        public void Adicionar(Usuario usuario)
+        private void Adicionar(Usuario usuario)
         {
             try
             {
@@ -29,13 +29,30 @@ namespace AutoParts.BLL
             }
         }
 
-        public void Editar(Usuario usuario)
+        private void Editar(Usuario usuario)
         {
             try
             {
                 Validar(usuario);
 
                 dao.Editar(usuario);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void Salvar(Usuario usuario)
+        {
+            try
+            {
+                usuario.Senha = OnCrypt.Encrypt(usuario.Senha);
+
+                if (usuario.UsuarioId == 0)
+                    Adicionar(usuario);
+                else
+                    Editar(usuario);
             }
             catch (Exception)
             {

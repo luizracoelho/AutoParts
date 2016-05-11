@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,21 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICrud.cs" />
+    <Compile Include="OnCrypt.cs" />
     <Compile Include="ServicoBO.cs" />
     <Compile Include="ProdutoBO.cs" />
     <Compile Include="UsuarioBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AutoParts.BL\AutoParts.BL.csproj">
-      <Project>{c8b57fdd-6dc3-431d-87fd-1fbbc2e309a7}</Project>
-      <Name>AutoParts.BL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\AutoParts.DAL\AutoParts.DAL.csproj">
       <Project>{e14d063b-bfdf-4168-a75d-70ea6dc8982c}</Project>
       <Name>AutoParts.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AutoParts.DL\AutoParts.DL.csproj">
+      <Project>{c8b57fdd-6dc3-431d-87fd-1fbbc2e309a7}</Project>
+      <Name>AutoParts.DL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

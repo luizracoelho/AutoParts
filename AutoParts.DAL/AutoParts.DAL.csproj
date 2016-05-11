@@ -47,9 +47,9 @@
     <Compile Include="UsuarioDAO.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AutoParts.BL\AutoParts.BL.csproj">
+    <ProjectReference Include="..\AutoParts.DL\AutoParts.DL.csproj">
       <Project>{c8b57fdd-6dc3-431d-87fd-1fbbc2e309a7}</Project>
-      <Name>AutoParts.BL</Name>
+      <Name>AutoParts.DL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

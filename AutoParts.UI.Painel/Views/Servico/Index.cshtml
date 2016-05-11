@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AutoParts.UI.Painel.Models.ServicoVM>
+
+@{
+    ViewBag.Title = "Serviços";
+}
+<p>
+    <ul class="breadcrumb">
+        <li>
+            <i class="glyphicon glyphicon-cog"></i> Serviços
+        </li>
+        <li>
+            <a href="@Url.Action("Salvar")" class="text-success"><i class="glyphicon glyphicon-plus"></i> Adicionar</a>
+        </li>
+    </ul>
+</p>
+
+<table class="table table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@Url.Action("Salvar", new { id = item.ServicoId })"><i class="glyphicon glyphicon-edit"></i>@Html.DisplayFor(modelItem => item.Nome)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

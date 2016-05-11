@@ -1,4 +1,4 @@
-﻿using AutoParts.BL;
+﻿using AutoParts.DL;
 using AutoParts.DAL;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace AutoParts.BLL
 {
-    public class ProdutoBO : ICrud<Produto>
+    public class ProdutoBO
     {
         ProdutoDAO dao;
 
@@ -15,7 +15,7 @@ namespace AutoParts.BLL
             dao = new ProdutoDAO();
         }
 
-        public void Adicionar(Produto produto)
+        private void Adicionar(Produto produto)
         {
             try
             {
@@ -29,13 +29,28 @@ namespace AutoParts.BLL
             }
         }
 
-        public void Editar(Produto produto)
+        private void Editar(Produto produto)
         {
             try
             {
                 Validar(produto);
 
                 dao.Editar(produto);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void Salvar(Produto produto)
+        {
+            try
+            {
+                if (produto.ProdutoId == 0)
+                    Adicionar(produto);
+                else
+                    Editar(produto);
             }
             catch (Exception)
             {

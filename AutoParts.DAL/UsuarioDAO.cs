@@ -1,4 +1,4 @@
-﻿using AutoParts.BL;
+﻿using AutoParts.DL;
 using System;
 using System.Collections.Generic;
 
@@ -8,22 +8,19 @@ namespace AutoParts.DAL
     {
         public void Adicionar(Usuario usuario)
         {
-            throw new NotImplementedException();
         }
 
         public void Editar(Usuario usuario)
         {
-            throw new NotImplementedException();
         }
 
         public IList<Usuario> Listar()
         {
-            throw new NotImplementedException();
+            return new List<Usuario>();
         }
 
         public void Remover(Usuario usuario)
         {
-            throw new NotImplementedException();
         }
     }
 }

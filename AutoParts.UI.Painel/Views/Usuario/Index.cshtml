@@ -1,0 +1,42 @@
+﻿@model IEnumerable<AutoParts.UI.Painel.Models.UsuarioVM>
+
+@{
+    ViewBag.Title = "Usuários";
+}
+
+<p>
+    <ul class="breadcrumb">
+        <li>
+            <i class="glyphicon glyphicon-user"></i> Usuários
+        </li>
+        <li>
+            <a href="@Url.Action("Salvar")" class="text-success"><i class="glyphicon glyphicon-plus"></i> Adicionar</a>
+        </li>
+    </ul>
+</p>
+
+<table class="table table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Login)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@Url.Action("Salvar", new { id = item.UsuarioId })"><i class="glyphicon glyphicon-edit"></i>@Html.DisplayFor(modelItem => item.Nome)</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Login)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

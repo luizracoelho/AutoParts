@@ -1,0 +1,5 @@
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.DL\bin\Debug\AutoParts.BL.dll
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.DL\bin\Debug\AutoParts.BL.pdb
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.DL\obj\Debug\AutoParts.BL.dll
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.DL\obj\Debug\AutoParts.BL.pdb
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.DL\obj\Debug\AutoParts.DL.csprojResolveAssemblyReference.cache

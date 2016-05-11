@@ -1,0 +1,74 @@
+﻿@model AutoParts.UI.Painel.Models.UsuarioCriarVM
+
+@{
+    ViewBag.Title = "Criar";
+}
+
+<p>
+    <ul class="breadcrumb">
+        <li><i class="glyphicon glyphicon-user"></i> Usuário</li>
+        <li><a href="@Url.Action("Index")"><i class="glyphicon glyphicon-repeat"></i> Voltar</a></li>
+    </ul>
+</p>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.UsuarioId)
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Login, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-3">
+                @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Senha, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.Senha, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Senha, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ConfirmarSenha, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                @Html.EditorFor(model => model.ConfirmarSenha, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfirmarSenha, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <button type="submit" value="Salvar" class="btn btn-primary col-md-12"><i class="glyphicon glyphicon-ok"></i> Confirmar</button>
+            </div>
+            <div class="col-md-2">
+                <a href="#remover" class="btn btn-link text-danger" data-toggle="collapse"><i class="glyphicon glyphicon-remove"></i> Remover</a>
+                @if (Model != null)
+                {
+                    if (Model.UsuarioId != 0)
+                    {
+                    }
+                }
+                <br />
+                <div id="remover" class="collapse">
+                    <a href="@Url.Action("Remover", new { id = 0 })" class="btn btn-danger col-md-12">Confirmar Remoção</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
