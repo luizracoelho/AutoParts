@@ -15,28 +15,23 @@
     </ul>
 </p>
 
-<table class="table table-condensed table-striped">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Login)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    <a href="@Url.Action("Salvar", new { id = item.UsuarioId })"><strong>@Html.DisplayFor(modelItem => item.Nome)</strong></a>
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Login)
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <img src="~/Images/photo.jpeg" class="media-object img-circle" style="width: 7.5rem;" alt="@Html.DisplayFor(modelItem => item.Login)">
+                        </div>
+                        <div class="media-body media-middle">
+                            <h4 class="media-heading">@Html.DisplayFor(modelItem => item.Nome)</h4>
+                            <a href="@Url.Action("Salvar", new { id = item.UsuarioId })"><strong>@@@Html.DisplayFor(modelItem => item.Login)</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

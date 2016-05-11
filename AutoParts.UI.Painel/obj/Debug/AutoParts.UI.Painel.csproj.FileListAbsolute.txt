@@ -73,5 +73,3 @@ C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Painel\bin\AutoParts.BL.pdb
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Painel\bin\AutoMapper.xml
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Painel\bin\AutoParts.DAL.pdb
-C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Painel\bin\AutoParts.mdf
-C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Painel\bin\AutoParts_log.ldf
