@@ -59,7 +59,7 @@ namespace AutoParts.UI.Painel.Controllers
 
                 bo.Salvar(produto);
 
-                return View("Index");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -69,7 +69,6 @@ namespace AutoParts.UI.Painel.Controllers
             }
         }
 
-        [HttpPost]
         public ActionResult Remover(int id)
         {
             try
@@ -81,7 +80,7 @@ namespace AutoParts.UI.Painel.Controllers
 
                 bo.Remover(produto);
 
-                return View("Index");
+                return RedirectToAction("Index");
             }
             catch (Exception)
             {

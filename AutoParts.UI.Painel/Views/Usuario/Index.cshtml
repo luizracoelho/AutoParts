@@ -10,7 +10,7 @@
             <i class="glyphicon glyphicon-user"></i> Usuários
         </li>
         <li>
-            <a href="@Url.Action("Salvar")" class="text-success"><i class="glyphicon glyphicon-plus"></i> Adicionar</a>
+            <a href="@Url.Action("Salvar")" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-plus"></i> Adicionar</a>
         </li>
     </ul>
 </p>
@@ -31,7 +31,7 @@
         {
             <tr>
                 <td>
-                    <a href="@Url.Action("Salvar", new { id = item.UsuarioId })"><i class="glyphicon glyphicon-edit"></i>@Html.DisplayFor(modelItem => item.Nome)</a>
+                    <a href="@Url.Action("Salvar", new { id = item.UsuarioId })"><strong>@Html.DisplayFor(modelItem => item.Nome)</strong></a>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Login)

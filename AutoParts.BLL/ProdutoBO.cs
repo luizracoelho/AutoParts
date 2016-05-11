@@ -74,7 +74,7 @@ namespace AutoParts.BLL
         {
             try
             {
-                return dao.Listar();
+                return dao.Listar().OrderBy(x => x.Nome).ToList();
             }
             catch (Exception)
             {
@@ -96,7 +96,7 @@ namespace AutoParts.BLL
 
         private void Validar(Produto produto)
         {
-            var produtoExiste = dao.Listar().FirstOrDefault(x => x.Nome.ToLower().Contains(produto.Nome.ToLower()));
+            var produtoExiste = dao.Listar().FirstOrDefault(x => x.Nome.ToLower().Contains(produto.Nome.ToLower()) && x.ProdutoId != produto.ProdutoId);
 
             if (produtoExiste != null)
                 throw new Exception("Já existe um Produto com este Nome.");

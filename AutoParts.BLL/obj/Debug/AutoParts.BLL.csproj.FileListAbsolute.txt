@@ -7,3 +7,5 @@ C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.BLL\bin\Debug\AutoParts.BL.pdb
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.BLL\obj\Debug\AutoParts.BLL.dll
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.BLL\obj\Debug\AutoParts.BLL.pdb
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.BLL\bin\Debug\AutoParts.mdf
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.BLL\bin\Debug\AutoParts_log.ldf

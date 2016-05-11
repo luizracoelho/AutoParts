@@ -39,6 +39,8 @@ namespace AutoParts.UI.Painel.Controllers
 
                 var usuarioVM = Mapper.Map<Usuario, UsuarioVM>(usuario);
 
+                usuarioVM.ConfirmarSenha = usuarioVM.Senha;
+
                 return View(usuarioVM);
             }
             catch (Exception)
@@ -59,7 +61,7 @@ namespace AutoParts.UI.Painel.Controllers
 
                 bo.Salvar(usuario);
 
-                return View("Index");
+                return RedirectToAction("Index");
             }
             catch (Exception ex)
             {
@@ -69,7 +71,6 @@ namespace AutoParts.UI.Painel.Controllers
             }
         }
 
-        [HttpPost]
         public ActionResult Remover(int id)
         {
             try
@@ -81,7 +82,7 @@ namespace AutoParts.UI.Painel.Controllers
 
                 bo.Remover(usuario);
 
-                return View("Index");
+                return RedirectToAction("Index");
             }
             catch (Exception)
             {

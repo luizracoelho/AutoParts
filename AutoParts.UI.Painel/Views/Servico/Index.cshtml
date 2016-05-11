@@ -9,7 +9,7 @@
             <i class="glyphicon glyphicon-cog"></i> Serviços
         </li>
         <li>
-            <a href="@Url.Action("Salvar")" class="text-success"><i class="glyphicon glyphicon-plus"></i> Adicionar</a>
+            <a href="@Url.Action("Salvar")" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-plus"></i> Adicionar</a>
         </li>
     </ul>
 </p>
@@ -33,10 +33,10 @@
         {
             <tr>
                 <td>
-                    <a href="@Url.Action("Salvar", new { id = item.ServicoId })"><i class="glyphicon glyphicon-edit"></i>@Html.DisplayFor(modelItem => item.Nome)</a>
+                    <a href="@Url.Action("Salvar", new { id = item.ServicoId })"><strong>@Html.DisplayFor(modelItem => item.Nome)</strong></a>
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
+                    @Html.Raw(item.Descricao)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Valor)

@@ -6,7 +6,7 @@ namespace AutoParts.UI.Painel.Models
     {
         public int ServicoId { get; set; }
 
-        [Required]
+        [Required, MaxLength(50)]
         public string Nome { get; set; }
 
         [Required, Display(Name = "Descrição"), DataType(DataType.MultilineText)]

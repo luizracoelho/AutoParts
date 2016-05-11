@@ -62,7 +62,7 @@
             <div class="col-md-2">
                 @if (Model != null)
                 {
-                    if (Model.UsuarioId != 0)
+                    if (Model.UsuarioId > 1)
                     {
                         <a href="#remover" class="btn btn-link-danger btn-block" data-toggle="collapse"><i class="glyphicon glyphicon-remove"></i> Remover</a>
                         <div id="remover" class="collapse">

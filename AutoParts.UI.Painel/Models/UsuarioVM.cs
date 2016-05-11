@@ -6,13 +6,13 @@ namespace AutoParts.UI.Painel.Models
     {
         public int UsuarioId { get; set; }
 
-        [Required]
+        [Required, MaxLength(50)]
         public string Nome { get; set; }
 
-        [Required]
+        [Required, MaxLength(25)]
         public string Login { get; set; }
 
-        [Required, DataType(DataType.Password)]
+        [Required, MaxLength(25), DataType(DataType.Password)]
         public string Senha { get; set; }
 
         [Display(Name = "Confirmar Senha"), Compare("Senha"), DataType(DataType.Password)]

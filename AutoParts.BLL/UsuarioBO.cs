@@ -47,6 +47,7 @@ namespace AutoParts.BLL
         {
             try
             {
+                usuario.Login = usuario.Login.ToLower();
                 usuario.Senha = OnCrypt.Encrypt(usuario.Senha);
 
                 if (usuario.UsuarioId == 0)
@@ -76,7 +77,7 @@ namespace AutoParts.BLL
         {
             try
             {
-                return dao.Listar();
+                return dao.Listar().OrderBy(x=>x.Nome).ToList();
             }
             catch (Exception)
             {
@@ -88,6 +89,9 @@ namespace AutoParts.BLL
         {
             try
             {
+                if (usuario.UsuarioId == 1)
+                    throw new Exception("Não é possível remover o Administrador");
+
                 dao.Remover(usuario);
             }
             catch (Exception)
@@ -98,7 +102,7 @@ namespace AutoParts.BLL
 
         private void Validar(Usuario usuario)
         {
-            var usuarioExiste = dao.Listar().FirstOrDefault(x => x.Login.ToLower().Contains(usuario.Login.ToLower()));
+            var usuarioExiste = dao.Listar().FirstOrDefault(x => x.Login.Contains(usuario.Login) && x.UsuarioId != usuario.UsuarioId);
 
             if (usuarioExiste != null)
                 throw new Exception("Já existe um Usuário com este Login.");

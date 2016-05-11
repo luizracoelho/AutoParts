@@ -74,7 +74,7 @@ namespace AutoParts.BLL
         {
             try
             {
-                return dao.Listar();
+                return dao.Listar().OrderBy(x=>x.Nome).ToList();
             }
             catch (Exception)
             {
@@ -96,7 +96,7 @@ namespace AutoParts.BLL
 
         private void Validar(Servico servico)
         {
-            var servicoExiste = dao.Listar().FirstOrDefault(x => x.Nome.ToLower().Contains(servico.Nome.ToLower()));
+            var servicoExiste = dao.Listar().FirstOrDefault(x => x.Nome.ToLower().Contains(servico.Nome.ToLower()) && x.ServicoId != servico.ServicoId);
 
             if (servicoExiste != null)
                 throw new Exception("Já existe um Serviço com este Nome.");
