@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace AutoParts.DAL
 {
-    public class ProdutoDAO : ICrud<Produto>
+    public class ProdutoDAO : ICrudable<Produto>
     {
         public void Adicionar(Produto produto)
         {

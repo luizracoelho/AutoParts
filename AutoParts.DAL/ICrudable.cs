@@ -2,7 +2,7 @@
 
 namespace AutoParts.DAL
 {
-    public interface ICrud<T>
+    public interface ICrudable<T>
     {
         void Adicionar(T entidade);
         void Editar(T entidade);

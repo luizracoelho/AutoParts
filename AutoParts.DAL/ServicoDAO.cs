@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace AutoParts.DAL
 {
-    public class ServicoDAO : ICrud<Servico>
+    public class ServicoDAO : ICrudable<Servico>
     {
         public void Adicionar(Servico servico)
         {
