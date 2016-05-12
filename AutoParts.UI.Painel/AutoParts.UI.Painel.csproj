@@ -175,6 +175,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\methods_pt-br.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\on-upload.js" />
     <Content Include="Scripts\summernote.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -193,6 +194,7 @@
     </Compile>
     <Compile Include="Globalization\DecimalModelBinder.cs" />
     <Compile Include="Mappers\AutoMapperConfig.cs" />
+    <Compile Include="Models\OnUpload.cs" />
     <Compile Include="Models\ProdutoVM.cs" />
     <Compile Include="Models\ServicoVM.cs" />
     <Compile Include="Models\UsuarioVM.cs" />

@@ -14,5 +14,7 @@ namespace AutoParts.UI.Painel.Models
 
         [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Valor { get; set; }
+
+        public string Imagem { get; set; }
     }
 }

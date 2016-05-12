@@ -4,7 +4,6 @@ using AutoParts.DL;
 using AutoParts.UI.Painel.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
@@ -22,6 +21,10 @@ namespace AutoParts.UI.Painel.Controllers
         public ActionResult Index()
         {
             var lista = Mapper.Map<IList<Usuario>, IList<UsuarioVM>>(bo.Listar());
+
+            foreach (var item in lista)
+                item.Imagem = OnUpload.ObterImagem(item.UsuarioId, "Usuario");
+
             return View(lista);
         }
 
@@ -90,5 +93,4 @@ namespace AutoParts.UI.Painel.Controllers
             }
         }
     }
-
 }

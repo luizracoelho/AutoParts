@@ -22,6 +22,10 @@ namespace AutoParts.UI.Painel.Controllers
         public ActionResult Index()
         {
             var lista = Mapper.Map<IList<Servico>, IList<ServicoVM>>(bo.Listar());
+
+            foreach (var item in lista)
+                item.Imagem = OnUpload.ObterImagem(item.ServicoId, "Servico");
+
             return View(lista);
         }
 

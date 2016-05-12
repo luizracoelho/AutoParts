@@ -34,6 +34,9 @@ namespace AutoParts.UI.Painel.App_Start
             bundles.Add(new ScriptBundle("~/bundles/jquerymask").Include(
                       "~/Scripts/jquery.mask.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/upload").Include(
+          "~/Scripts/on-upload.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/summernote.css",

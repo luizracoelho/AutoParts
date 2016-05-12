@@ -11,7 +11,16 @@
     @Scripts.Render("~/bundles/jquerymask")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/summernote")
+    @Scripts.Render("~/bundles/upload")
+
     @RenderSection("scripts", required: false)
+
+    <!--Tooltips-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">

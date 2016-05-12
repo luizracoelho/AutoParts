@@ -15,6 +15,11 @@
     </ul>
 </p>
 
+@using (Html.BeginForm())
+{
+    <input id="upload" data-upload-id="0" data-upload-entidade="Usuario" type="file" style="display: none;" />
+}
+
 <div class="row">
     @foreach (var item in Model)
     {
@@ -23,11 +28,17 @@
                 <div class="panel-body">
                     <div class="media">
                         <div class="media-left media-middle">
-                            <img src="~/Images/photo.jpeg" class="media-object img-circle" style="width: 7.5rem;" alt="@Html.DisplayFor(modelItem => item.Login)">
+                            <a href="#" onclick="uploadImageProfile(@item.UsuarioId);">
+                                <div class="media-object img-profile-sm">
+                                    <img src="@item.Imagem" data-upload-id="@item.UsuarioId" style="width: 100%;" alt="@Html.DisplayFor(modelItem => item.Login)" data-toggle="tooltip" title="Alterar Imagem">
+                                </div>
+                            </a>
                         </div>
-                        <div class="media-body media-middle">
+                        <div class="media-body media-middle text-center">
                             <h4 class="media-heading">@Html.DisplayFor(modelItem => item.Nome)</h4>
-                            <a href="@Url.Action("Salvar", new { id = item.UsuarioId })"><strong>@@@Html.DisplayFor(modelItem => item.Login)</strong></a>
+                            <a href="@Url.Action("Salvar", new { id = item.UsuarioId })">
+                                <strong>@@@Html.DisplayFor(modelItem => item.Login)</strong>
+                            </a>
                         </div>
                     </div>
                 </div>

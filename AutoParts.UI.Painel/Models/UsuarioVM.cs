@@ -17,6 +17,8 @@ namespace AutoParts.UI.Painel.Models
 
         [Display(Name = "Confirmar Senha"), Compare("Senha"), DataType(DataType.Password)]
         public string ConfirmarSenha { get; set; }
+
+        public string Imagem { get; set; }
     }
 
     public class UsuarioEntrarVM
