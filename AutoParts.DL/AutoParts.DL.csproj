@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Servico.cs" />
     <Compile Include="Produto.cs" />
+    <Compile Include="Tools\Email.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

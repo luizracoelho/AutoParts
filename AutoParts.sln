@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.DL", "AutoParts.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.UI.Painel", "AutoParts.UI.Painel\AutoParts.UI.Painel.csproj", "{1DC0099F-B109-446E-ACEE-C7980AC685C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.UI.Site", "AutoParts.UI.Site\AutoParts.UI.Site.csproj", "{DE71D2DF-9A4A-463C-B4AE-371894D3D9BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1DC0099F-B109-446E-ACEE-C7980AC685C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DC0099F-B109-446E-ACEE-C7980AC685C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DC0099F-B109-446E-ACEE-C7980AC685C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE71D2DF-9A4A-463C-B4AE-371894D3D9BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE71D2DF-9A4A-463C-B4AE-371894D3D9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE71D2DF-9A4A-463C-B4AE-371894D3D9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE71D2DF-9A4A-463C-B4AE-371894D3D9BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

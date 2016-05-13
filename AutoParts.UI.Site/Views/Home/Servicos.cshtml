@@ -1,0 +1,34 @@
+﻿@model IEnumerable<AutoParts.DL.Servico>
+
+@{
+    ViewBag.Title = "Servicos";
+}
+
+<h2>Servicos</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.ActionLink("Detalhes", "DetalhesServico", new { id=item.ServicoId })
+        </td>
+    </tr>
+}
+
+</table>
