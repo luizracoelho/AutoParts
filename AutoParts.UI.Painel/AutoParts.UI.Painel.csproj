@@ -213,6 +213,7 @@
     <Content Include="Views\Produto\Salvar.cshtml" />
     <Content Include="Views\Servico\Index.cshtml" />
     <Content Include="Views\Servico\Salvar.cshtml" />
+    <Content Include="Views\Home\Entrar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

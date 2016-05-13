@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace AutoParts.UI.Painel.Controllers
 {
+    [Authorize]
     public class ProdutoController : Controller
     {
         ProdutoBO bo;

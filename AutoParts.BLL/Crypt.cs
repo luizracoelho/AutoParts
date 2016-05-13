@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AutoParts.BLL
 {
-    public class OnCrypt
+    public class Crypt
     {
         static readonly string PasswordHash = "P@@Sw0rd";
         static readonly string SaltKey = "S@LT&KEY";

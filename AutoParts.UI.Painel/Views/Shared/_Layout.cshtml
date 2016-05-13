@@ -23,6 +23,15 @@
     </script>
 </head>
 <body>
+    @using AutoParts.DL;
+    @using AutoParts.BLL;
+    @using AutoParts.UI.Painel.Models;
+
+    @{
+        var usubo = new UsuarioBO();
+        var usu = usubo.Encontrar(User.Identity.Name);
+    }
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -40,6 +49,17 @@
                     <li><a href="@Url.Action("Index", "Usuario")"><i class="glyphicon glyphicon-user"></i> Usuários</a></li>
                     <li><a href="@Url.Action("Index", "Produto")"><i class="glyphicon glyphicon-shopping-cart"></i> Produtos</a></li>
                     <li><a href="@Url.Action("Index", "Servico")"><i class="glyphicon glyphicon-cog"></i> Serviços</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li style="line-height: 5rem;">
+                        <img src="@OnUpload.ObterImagem(usu.UsuarioId, "Usuario").Replace("..", "")" class="img-circle" style="width: 4.8rem; max-height: 4.8rem;" />
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Salvar", "Usuario", new { id = usu.UsuarioId })">
+                        @@@usu.Login
+                        </a>
+                    </li>
+                    <li><a href="@Url.Action("Sair", "Home")"><i class="glyphicon glyphicon-log-out"></i> Sair</a></li>
                 </ul>
             </div>
         </div>

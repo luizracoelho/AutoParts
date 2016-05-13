@@ -25,6 +25,7 @@ namespace AutoParts.UI.Painel.Models
     {
         public string Login { get; set; }
 
+        [Required, MaxLength(25), DataType(DataType.Password)]
         public string Senha { get; set; }
     }
 }

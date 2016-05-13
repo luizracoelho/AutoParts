@@ -48,7 +48,7 @@ namespace AutoParts.BLL
             try
             {
                 usuario.Login = usuario.Login.ToLower();
-                usuario.Senha = OnCrypt.Encrypt(usuario.Senha);
+                usuario.Senha = Crypt.Encrypt(usuario.Senha);
 
                 if (usuario.UsuarioId == 0)
                     Adicionar(usuario);
@@ -66,6 +66,18 @@ namespace AutoParts.BLL
             try
             {
                 return Listar().FirstOrDefault(x => x.UsuarioId == id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public Usuario Encontrar(string login)
+        {
+            try
+            {
+                return Listar().FirstOrDefault(x => x.Login.Equals(login.ToLower()));
             }
             catch (Exception)
             {
@@ -106,6 +118,28 @@ namespace AutoParts.BLL
 
             if (usuarioExiste != null)
                 throw new Exception("Já existe um Usuário com este Login.");
+        }
+
+        public Usuario Login(Usuario usuario)
+        {
+            try
+            {
+            var usuarioBanco = Encontrar(usuario.Login);
+
+                if (usuarioBanco == null)
+                    throw new Exception();
+
+                var senhaEncriptada = Crypt.Encrypt(usuario.Senha);
+
+                if (!usuarioBanco.Senha.Equals(senhaEncriptada))
+                    throw new Exception();
+
+                return usuarioBanco;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Login ou Senha incorretos.");
+            }
         }
     }
 }

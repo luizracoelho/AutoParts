@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace AutoParts.UI.Painel.Controllers
 {
+    [Authorize]
     public class UsuarioController : Controller
     {
         UsuarioBO bo;
@@ -42,7 +43,7 @@ namespace AutoParts.UI.Painel.Controllers
 
                 var usuarioVM = Mapper.Map<Usuario, UsuarioVM>(usuario);
 
-                usuarioVM.ConfirmarSenha = usuarioVM.Senha;
+                usuarioVM.Senha = null;
 
                 return View(usuarioVM);
             }
