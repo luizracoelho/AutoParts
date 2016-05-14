@@ -36,9 +36,6 @@
                         <div class="media-body media-middle">
                             <h4 class="media-heading"><a href="@Url.Action("Salvar", new { id = item.ServicoId })"><strong>@Html.DisplayFor(modelItem => item.Nome)</strong></a></h4>
                             <p>
-                                @Html.Raw(item.Descricao)
-                            </p>
-                            <p>
                                 <span class="h3">@Html.DisplayFor(modelItem => item.Valor)</span>
                             </p>
                         </div>
