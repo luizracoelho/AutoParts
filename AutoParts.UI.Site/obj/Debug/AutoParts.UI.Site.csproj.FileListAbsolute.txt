@@ -65,3 +65,7 @@ C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Site\bin\roslyn\vbc.exe.config
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Site\bin\roslyn\vbc.rsp
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Site\bin\pt-br\System.Web.Mvc.resources.dll
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Site\bin\AutoParts.mdf
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Site\bin\AutoParts_log.ldf
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Site\bin\AutoMapper.dll
+C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Site\bin\AutoMapper.xml

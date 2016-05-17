@@ -1,6 +1,8 @@
-﻿using AutoParts.BL.Tools;
+﻿using AutoMapper;
+using AutoParts.BL.Tools;
 using AutoParts.BLL;
 using AutoParts.BLL.Tools;
+using AutoParts.DL;
 using AutoParts.UI.Site.Models;
 using System;
 using System.Collections.Generic;
@@ -28,7 +30,12 @@ namespace AutoParts.UI.Site.Controllers
         {
             try
             {
-                return View(produtoBO.Listar());
+                var lista = Mapper.Map<IList<Produto>, IList<ProdutoVM>>(produtoBO.Listar());
+
+                foreach (var item in lista)
+                    item.Imagem = OnUpload.ObterImagem(item.ProdutoId, "Produto");
+
+                return View(lista);
             }
             catch (Exception)
             {
@@ -48,7 +55,9 @@ namespace AutoParts.UI.Site.Controllers
                 if (produto == null)
                     throw new Exception();
 
-                return View(produto);
+                var produtoVM = Mapper.Map<Produto, ProdutoVM>(produto);
+
+                return View(produtoVM);
             }
             catch (Exception)
             {
@@ -60,7 +69,12 @@ namespace AutoParts.UI.Site.Controllers
         {
             try
             {
-                return View(servicoBO.Listar());
+                var lista = Mapper.Map<IList<Servico>, IList<ServicoVM>>(servicoBO.Listar());
+
+                foreach (var item in lista)
+                    item.Imagem = OnUpload.ObterImagem(item.ServicoId, "Servico");
+
+                return View(lista);
             }
             catch (Exception)
             {
@@ -80,7 +94,9 @@ namespace AutoParts.UI.Site.Controllers
                 if (servico == null)
                     throw new Exception();
 
-                return View(servico);
+                var servicoVM = Mapper.Map<Servico, ServicoVM>(servico);
+
+                return View(servicoVM);
             }
             catch (Exception)
             {

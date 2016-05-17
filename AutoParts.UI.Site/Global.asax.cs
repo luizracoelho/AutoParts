@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoParts.UI.Site.Mappers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,7 @@ namespace AutoParts.UI.Site
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            AutoMapperConfig.RegisterMappings();
         }
     }
 }
