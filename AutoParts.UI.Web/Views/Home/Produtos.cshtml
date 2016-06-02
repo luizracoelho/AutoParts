@@ -1,0 +1,34 @@
+﻿@model IEnumerable<AutoParts.UI.Web.Areas.Painel.Models.ProdutoVM>
+
+@{
+    ViewBag.Title = "Produtos";
+}
+
+<h2>Produtos</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="media">
+                        <div class="media-left media-middle">
+                            <a href="#" onclick="uploadImageProfile(@item.ProdutoId);">
+                                <div class="media-object img-profile">
+                                    <img src="../@item.Imagem" data-upload-id="@item.ProdutoId" style="width: 100%;" alt="@Html.DisplayFor(modelItem => item.Nome)" data-toggle="tooltip" title="Alterar Imagem">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="media-body media-middle">
+                            <h4 class="media-heading"><a href="@Url.Action("DetalhesProduto", new { id = item.ProdutoId })"><strong>@Html.DisplayFor(modelItem => item.Nome)</strong></a></h4>
+                            <p>
+                                <span class="h3">@Html.DisplayFor(modelItem => item.Valor)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

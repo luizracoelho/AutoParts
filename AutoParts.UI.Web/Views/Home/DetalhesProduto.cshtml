@@ -1,0 +1,45 @@
+﻿@model AutoParts.UI.Web.Areas.Painel.Models.ProdutoVM
+
+@{
+    ViewBag.Title = "Detalhes do Produto";
+}
+
+<h2>DetalhesProduto</h2>
+
+<div>
+    <h4>Produto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+    </dl>
+
+    <div class="media-object img-profile-lg">
+        <img src="~/@Model.Imagem" data-upload-id="@Model.ProdutoId" style="width: 100%;" alt="@Html.DisplayFor(model => model.Nome)"/>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Voltar para Lista", "Produtos")
+</p>

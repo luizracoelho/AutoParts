@@ -1,0 +1,84 @@
+﻿@model AutoParts.UI.Web.Areas.Painel.Models.ProdutoVM
+
+@{
+    ViewBag.Title = "Salvar";
+    Layout = "~/Areas/Painel/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <ul class="breadcrumb">
+        <li><i class="glyphicon glyphicon-shopping-cart"></i> Produto</li>
+        <li><a href="@Url.Action("Index")"><i class="glyphicon glyphicon-repeat"></i> Voltar</a></li>
+    </ul>
+</p>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    if (Model != null)
+    {
+        @Html.HiddenFor(model => model.ProdutoId)
+    }
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Descricao, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Valor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-2">
+                <span class="input-group">
+                    <span class="input-group-addon">R$</span>
+                    @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
+                </span>
+                @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-2">
+                <button type="submit" value="Salvar" class="btn btn-primary btn-block"><i class="glyphicon glyphicon-ok"></i> Confirmar</button>
+            </div>
+            <div class="col-md-2">
+                @if (Model != null)
+                {
+                    if (Model.ProdutoId != 0)
+                    {
+                        <a href="#remover" class="btn btn-link-danger btn-block" data-toggle="collapse"><i class="glyphicon glyphicon-remove"></i> Remover</a>
+                        <div id="remover" class="collapse">
+                            <a href="@Url.Action("Remover", new { id = Model.ProdutoId })" class="btn btn-danger btn-block">Confirmar a Remoção</a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#Descricao').summernote({
+                height: "28rem",
+            });
+
+            $('#Valor').mask('000.000.000,00', { reverse: true });
+        });
+    </script>
+}
