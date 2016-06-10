@@ -6,7 +6,7 @@ namespace AutoParts.DAL
 {
     public class ConnectorDAO
     {
-        public SqlConnection GetConnection()
+        public static SqlConnection GetConnection()
         {
             return new SqlConnection(ConfigurationManager.ConnectionStrings["DataContext"].ConnectionString);
         }

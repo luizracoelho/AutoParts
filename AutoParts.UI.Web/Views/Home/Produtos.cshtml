@@ -14,11 +14,9 @@
                 <div class="panel-body">
                     <div class="media">
                         <div class="media-left media-middle">
-                            <a href="#" onclick="uploadImageProfile(@item.ProdutoId);">
-                                <div class="media-object img-profile">
-                                    <img src="../@item.Imagem" data-upload-id="@item.ProdutoId" style="width: 100%;" alt="@Html.DisplayFor(modelItem => item.Nome)" data-toggle="tooltip" title="Alterar Imagem">
-                                </div>
-                            </a>
+                            <div class="media-object img-profile">
+                                <img src="../@item.Imagem" data-upload-id="@item.ProdutoId" style="width: 100%;" alt="@Html.DisplayFor(modelItem => item.Nome)" data-toggle="tooltip" title="Alterar Imagem">
+                            </div>
                         </div>
                         <div class="media-body media-middle">
                             <h4 class="media-heading"><a href="@Url.Action("DetalhesProduto", new { id = item.ProdutoId })"><strong>@Html.DisplayFor(modelItem => item.Nome)</strong></a></h4>

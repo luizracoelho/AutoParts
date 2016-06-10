@@ -7,7 +7,7 @@
 
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
     <script src="~/scripts/modernizr-2.8.3.js"></script>
     <script src="~/scripts/jquery-2.2.3.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
@@ -37,12 +37,38 @@
         </div>
     </div>
 
+    @RenderSection("Carrousel", false)
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - SQL AutoParts</p>
-        </footer>
+
     </div>
+
+    <footer class="text-center bg-footer">
+        <div class="container">
+            <br />
+            <p>&copy; @DateTime.Now.Year - SQL AutoParts</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <a class="btn btn-primary center-block">
+                            <span class="fa fa-facebook"></span> Facebook
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 center-block">
+                        <a class="btn btn-info center-block">
+                            <span class="fa fa-twitter"></span> Twitter
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <a class="btn btn-danger center-block">
+                            <span class="fa fa-google-plus"></span> Google Plus
+                        </a>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

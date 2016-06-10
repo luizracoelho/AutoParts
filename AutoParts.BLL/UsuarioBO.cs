@@ -90,7 +90,7 @@ namespace AutoParts.BLL
         {
             try
             {
-                return dao.Listar().OrderBy(x=>x.Nome).ToList();
+                return dao.Listar().OrderBy(x => x.Nome).ToList();
             }
             catch (Exception)
             {
@@ -125,7 +125,7 @@ namespace AutoParts.BLL
         {
             try
             {
-            var usuarioBanco = Encontrar(usuario.Login);
+                var usuarioBanco = Encontrar(usuario.Login);
 
                 if (usuarioBanco == null)
                     throw new Exception();

@@ -4,42 +4,23 @@
     ViewBag.Title = "Detalhes do Servico";
 }
 
-<h2>DetalhesServico</h2>
-
-<div>
-    <h4>Servico</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-
-        <dd>
-            @Html.Raw(Model.Descricao)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Valor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Valor)
-        </dd>
-
-    </dl>
-
-    <div class="media-object img-profile-lg">
-        <img src="~/@Model.Imagem" data-upload-id="@Model.ServicoId" style="width: 100%;" alt="@Html.DisplayFor(model => model.Nome)"/>
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-sm-8 text-center">
+            <h3>@Html.DisplayFor(model => model.Nome)</h3>
+            <hr />
+            <h2>@Html.DisplayFor(model => model.Valor)</h2>
+            <p>
+                @Html.Raw(Model.Descricao)
+            </p>
+        </div>
+        <div class="img-thumbnail media-object img-profile-lg col-sm-4">
+            <img src="~/@Model.Imagem" style="width: 100%;" alt="@Html.DisplayFor(model => model.Nome)" />
+        </div>
     </div>
 </div>
+
 <p>
     @Html.ActionLink("Voltar para Lista", "Servicos")
 </p>

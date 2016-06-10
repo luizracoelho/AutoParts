@@ -18,7 +18,7 @@ namespace AutoParts.DAL
         public ProdutoDAO()
         {
             var dao = new ConnectorDAO();
-            conn = dao.GetConnection();
+            conn = ConnectorDAO.GetConnection();
         }
 
         public void Adicionar(Produto produto)

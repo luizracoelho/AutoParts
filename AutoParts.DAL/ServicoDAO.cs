@@ -18,7 +18,7 @@ namespace AutoParts.DAL
         public ServicoDAO()
         {
             var dao = new ConnectorDAO();
-            conn = dao.GetConnection();
+            conn = ConnectorDAO.GetConnection();
         }
 
         public void Adicionar(Servico servico)
