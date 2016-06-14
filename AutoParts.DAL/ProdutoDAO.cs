@@ -30,8 +30,8 @@ namespace AutoParts.DAL
                 using (var cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.Add("@NOME_PROD", SqlDbType.VarChar).Value = produto.Nome;
-                    cmd.Parameters.AddWithValue("@DESC_PROD", SqlDbType.VarChar).Value = produto.Descricao;
-                    cmd.Parameters.AddWithValue("@VALOR_PROD", SqlDbType.Decimal).Value = produto.Valor;
+                    cmd.Parameters.Add("@DESC_PROD", SqlDbType.VarChar).Value = produto.Descricao;
+                    cmd.Parameters.Add("@VALOR_PROD", SqlDbType.Decimal).Value = produto.Valor;
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -60,8 +60,8 @@ namespace AutoParts.DAL
                 {
                     cmd.Parameters.Add("@PRODUTO_ID", SqlDbType.Int).Value = produto.ProdutoId;
                     cmd.Parameters.Add("@NOME_PROD", SqlDbType.VarChar).Value = produto.Nome;
-                    cmd.Parameters.AddWithValue("@DESC_PROD", SqlDbType.VarChar).Value = produto.Descricao;
-                    cmd.Parameters.AddWithValue("@VALOR_PROD", SqlDbType.Decimal).Value = produto.Valor;
+                    cmd.Parameters.Add("@DESC_PROD", SqlDbType.VarChar).Value = produto.Descricao;
+                    cmd.Parameters.Add("@VALOR_PROD", SqlDbType.Decimal).Value = produto.Valor;
 
                     cmd.CommandType = CommandType.StoredProcedure;
 

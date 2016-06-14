@@ -30,8 +30,8 @@ namespace AutoParts.DAL
                 using (var cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.Add("@NOME_USUARIO", SqlDbType.VarChar).Value = usuario.Nome;
-                    cmd.Parameters.AddWithValue("@LOGIN", SqlDbType.VarChar).Value = usuario.Login;
-                    cmd.Parameters.AddWithValue("@SENHA", SqlDbType.VarChar).Value = usuario.Senha;
+                    cmd.Parameters.Add("@LOGIN", SqlDbType.VarChar).Value = usuario.Login;
+                    cmd.Parameters.Add("@SENHA", SqlDbType.VarChar).Value = usuario.Senha;
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -60,8 +60,8 @@ namespace AutoParts.DAL
                 {
                     cmd.Parameters.Add("@USUARIO_ID", SqlDbType.Int).Value = usuario.UsuarioId;
                     cmd.Parameters.Add("@NOME_USUARIO", SqlDbType.VarChar).Value = usuario.Nome;
-                    cmd.Parameters.AddWithValue("@LOGIN", SqlDbType.VarChar).Value = usuario.Login;
-                    cmd.Parameters.AddWithValue("@SENHA", SqlDbType.VarChar).Value = usuario.Senha;
+                    cmd.Parameters.Add("@LOGIN", SqlDbType.VarChar).Value = usuario.Login;
+                    cmd.Parameters.Add("@SENHA", SqlDbType.VarChar).Value = usuario.Senha;
 
                     cmd.CommandType = CommandType.StoredProcedure;
 

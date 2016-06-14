@@ -74,5 +74,3 @@ C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Web\obj\Debug\AutoParts.UI.Web.csprojResolveAssemblyReference.cache
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Web\obj\Debug\AutoParts.UI.Painel.dll
 C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Web\obj\Debug\AutoParts.UI.Painel.pdb
-C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Web\bin\AutoParts.mdf
-C:\Users\LuizRicardo\Dropbox\Reges\5 Termo\Linguagem Web II\AutoParts\AutoParts.UI.Web\bin\AutoParts_log.ldf

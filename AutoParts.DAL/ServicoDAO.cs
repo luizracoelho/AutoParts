@@ -30,8 +30,8 @@ namespace AutoParts.DAL
                 using (var cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.Add("@NOME_SERV", SqlDbType.VarChar).Value = servico.Nome;
-                    cmd.Parameters.AddWithValue("@DESC_SERV", SqlDbType.VarChar).Value = servico.Descricao;
-                    cmd.Parameters.AddWithValue("@VALOR_SERV", SqlDbType.Decimal).Value = servico.Valor;
+                    cmd.Parameters.Add("@DESC_SERV", SqlDbType.VarChar).Value = servico.Descricao;
+                    cmd.Parameters.Add("@VALOR_SERV", SqlDbType.Decimal).Value = servico.Valor;
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -60,8 +60,8 @@ namespace AutoParts.DAL
                 {
                     cmd.Parameters.Add("@SERVICO_ID", SqlDbType.Int).Value = servico.ServicoId;
                     cmd.Parameters.Add("@NOME_SERV", SqlDbType.VarChar).Value = servico.Nome;
-                    cmd.Parameters.AddWithValue("@DESC_SERV", SqlDbType.VarChar).Value = servico.Descricao;
-                    cmd.Parameters.AddWithValue("@VALOR_SERV", SqlDbType.Decimal).Value = servico.Valor;
+                    cmd.Parameters.Add("@DESC_SERV", SqlDbType.VarChar).Value = servico.Descricao;
+                    cmd.Parameters.Add("@VALOR_SERV", SqlDbType.Decimal).Value = servico.Valor;
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
